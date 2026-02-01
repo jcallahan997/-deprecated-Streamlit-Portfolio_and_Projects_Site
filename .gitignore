@@ -1,0 +1,29 @@
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.so
+.eggs/
+*.egg-info/
+*.egg
+
+# IDE / OS
+.DS_Store
+.idea/
+*.code-workspace
+
+# Dash / Flask
+.webassets-cache/
+instance/
+
+# Secrets
+.env
+*.env

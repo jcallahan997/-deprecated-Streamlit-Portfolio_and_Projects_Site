@@ -1,0 +1,341 @@
+/* Portfolio Dash — dark mode, cerulean & burgundy, professional */
+
+:root {
+  --cerulean: #007BA7;
+  --cerulean-light: #2A9FD6;
+  --cerulean-dim: #005f82;
+  --burgundy: #722F37;
+  --burgundy-light: #8B3A42;
+  --burgundy-dim: #5C262D;
+  --bg-dark: #0f1419;
+  --bg-card: #161b22;
+  --bg-elevated: #1c2128;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --border: #30363d;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-primary);
+}
+
+#react-entry-point,
+._dash-app-content {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+}
+
+/* Base dark wrapper */
+.portfolio-dark {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Sidebar + main layout */
+.portfolio-with-sidebar {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar-wrapper {
+  flex-shrink: 0;
+  width: 260px;
+  min-height: 100vh;
+  display: block;
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--burgundy-dim) 100%);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-sidebar {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.portfolio-sidebar .sidebar-header {
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-sidebar .sidebar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.portfolio-sidebar a.sidebar-brand:hover {
+  color: var(--cerulean-light) !important;
+  background-color: rgba(0, 123, 167, 0.15);
+}
+
+.portfolio-sidebar .sidebar-brand:hover {
+  color: var(--cerulean-light) !important;
+  background-color: rgba(0, 123, 167, 0.15);
+}
+
+.portfolio-sidebar .sidebar-divider {
+  border-color: var(--border);
+  opacity: 0.8;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.portfolio-sidebar .sidebar-link {
+  display: block;
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  padding: 0.6rem 0.75rem !important;
+  border-radius: 6px;
+  margin-bottom: 0.25rem;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.portfolio-sidebar .sidebar-link:hover {
+  color: var(--cerulean-light) !important;
+  background-color: rgba(0, 123, 167, 0.1);
+  border-left-color: var(--cerulean);
+}
+
+.portfolio-sidebar .sidebar-link.active {
+  color: var(--text-primary) !important;
+  background-color: rgba(0, 123, 167, 0.2) !important;
+  border-left-color: var(--cerulean-light) !important;
+}
+
+.portfolio-main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 2.5rem;
+  overflow-x: auto;
+}
+
+/* Page content */
+.portfolio-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.portfolio-page h1,
+.portfolio-page h2,
+.portfolio-page h3,
+.portfolio-page h4 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.portfolio-page .section-title {
+  color: var(--cerulean-light);
+  font-weight: 600;
+}
+
+.portfolio-page .lead {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.portfolio-page .text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Links */
+.portfolio-link {
+  color: var(--cerulean-light) !important;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.portfolio-link:hover {
+  color: var(--cerulean) !important;
+  border-bottom-color: var(--cerulean);
+}
+
+/* Home photo */
+.portfolio-photo {
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Resume section */
+.resume-embed {
+  width: 100%;
+  height: 700px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+}
+
+/* Buttons */
+.btn-resume {
+  background-color: var(--burgundy) !important;
+  color: var(--text-primary) !important;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-resume:hover {
+  background-color: var(--burgundy-light) !important;
+  color: var(--text-primary) !important;
+}
+
+.btn-clustering {
+  background-color: var(--cerulean) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--cerulean-light) !important;
+  font-weight: 500;
+}
+
+.btn-clustering:hover {
+  background-color: var(--cerulean-dim) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--cerulean) !important;
+}
+
+.btn-toastmasters {
+  background-color: var(--burgundy) !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  font-weight: 500;
+}
+
+.btn-toastmasters:hover {
+  background-color: var(--burgundy-light) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Horizontal rule */
+.portfolio-hr {
+  border-color: var(--border) !important;
+  opacity: 0.8;
+}
+
+/* Clustering page — form controls */
+.portfolio-page .Select-control,
+.portfolio-page .Select-menu-outer,
+.portfolio-page .VirtualizedSelectFocusedOption {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+.portfolio-page .Select-value-label,
+.portfolio-page .Select-input {
+  color: var(--text-primary) !important;
+}
+
+/* Slider */
+.portfolio-page .rc-slider-track {
+  background-color: var(--cerulean) !important;
+}
+
+.portfolio-page .rc-slider-handle {
+  border-color: var(--cerulean-light) !important;
+  background-color: var(--cerulean) !important;
+}
+
+.portfolio-page .rc-slider-dot {
+  border-color: var(--border) !important;
+}
+
+/* Dash DataTable */
+.portfolio-page .dash-table-container,
+.portfolio-page .dt-table {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.portfolio-page .dash-table-container .dash-cell,
+.portfolio-page .dash-table-container .column-header {
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+  background-color: var(--bg-card) !important;
+}
+
+.portfolio-page .dash-table-container .dash-header {
+  background-color: var(--bg-elevated) !important;
+  border-color: var(--border) !important;
+  color: var(--cerulean-light) !important;
+}
+
+.portfolio-page .dash-table-container .row {
+  border-color: var(--border) !important;
+}
+
+.portfolio-page .dash-table-container .row:hover {
+  background-color: var(--bg-elevated) !important;
+}
+
+/* Toastmasters chat cards */
+.chat-card-user {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cerulean);
+  color: var(--text-primary);
+}
+
+.chat-card-assistant {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--burgundy);
+  color: var(--text-primary);
+}
+
+/* Input (Toastmasters) */
+.portfolio-page .form-control {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.portfolio-page .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.portfolio-page .form-control:focus {
+  border-color: var(--cerulean) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 167, 0.25) !important;
+}
+
+/* Plotly graph container — subtle dark fit */
+.portfolio-page .js-plotly-plot,
+.portfolio-page .plotly {
+  border-radius: 8px;
+}
+
+.portfolio-page .modebar {
+  background: var(--bg-card) !important;
+}
+
+.portfolio-page .modebar-btn path {
+  fill: var(--text-muted) !important;
+}
+
+/* Iframe (Car Prices) */
+.portfolio-page iframe {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
